@@ -1,0 +1,403 @@
+
+https://www.w3.org/html/wiki/Elements
+
+Notatka TYLKO do przypomnienia syntax'u i rewizji wiedzy UwU OwO TwT
+
+====== Podstawowa Struktura ======
+
+
+
+<!DOCTYPE html>     <!--Definiowanie czego się używa-->
+
+<html>              <!--Sekcja główna całej strony-->
+    <head>
+                    <!--Sekcja Head,metadata itp-->
+    </head>
+    <body>
+                    <!--Sekcja Body, Główna strona-->
+    </body>
+</html>
+
+
+
+====== Semantyczny Wzór Strony ======
+
+
+
+|-----------------------|
+|       <header>        |
+|-----------------------|
+|        <nav>          |
+|-----------------------|
+|   <section> |         |
+|-------------| <aside> |
+|   <article> |         |
+|-----------------------|
+|       <footer>        |
+|-----------------------|
+
+
+
+====== Metadata ======          <!--Zawartość <head> a szczególnie <meta>-->
+
+<title></title>                                                             <!--Tytuł strony, wyświetlany w karcie i wyszukiwarce-->
+
+<base href="https://www.marcin.com/" target="_blank">                       <!--Oznacza base struktury plików, by każdy attr "src" wiedział skąd brać pliki-->
+                                                                            <!--Zamiast "https://www.marcin.com/nudle/zdjecia" to "nudle/zdjecia"-->
+
+<meta charset="UTF-8">                                                      <!--Ustawienie Polskich znaków (I w sumie każdych innych narodowości)-->
+
+<meta name="keywords" content="Chuj, stolec, kał strona dla koprofili">     <!--Słowa kluczowe strony-->
+
+<meta name="description" content="Opis">                                    <!--Opis strony-->
+
+<meta name="author" content="Marcin Mewa">                                  <!--Autor-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">      <!--Żeby się strona na telefonach nie rozpierdalała jak siwy na komendzie-->
+
+<meta http-equiv="creation date" content="data wykonania">                  <!--Dodaje date wykonania strony-->
+
+<meta http-equiv="refresh" content="30">                                    <!--Odświeżenie strony co "30" sekund-->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">              <!--Wsparcie dla Internet Explorer XDDD-->
+
+<link rel="shortcut cion" href="" type="image/x-icon">                      <!--Impoort fav-ikonki-->
+
+<link rel="stylesheet" href="" type="text/css">                             <!--Połączenie pliku .css z plikiem .html-->
+
+    
+<meta name="robots" content="">              <!--By strona mogła zostać indexowana przez roboty google'a-->
+                                             <!--content=" noindex ; index ; nofollow ; follow ; none -->
+                                             <!--Reszta tu: https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag-->
+
+
+====== Elementy Blokowe ====== <!--Jak nie będziemy trzymać się ramy, to się obsramy-->
+
+
+
+<header></header>                           <!--Semantycznie oznacza cały NAGŁÓWEK strony-->
+
+<nav></nav>                                 <!--Używany do nawigacji po stronie, jednak tylko w jej głównych aspektach, zawsze z atrybutem href-->
+
+<section></section>                         <!--Semantycznie nie jest to element samodzielny,używany do grupowania powiązanych elementów, część większej części tekstu-->
+
+<article></article>                         <!--Semantycznie to treść samodzielna, niezależna od reszty dokumentu-->
+
+<aside></aside>                             <!--Semantycznie oznacza "sidebar" strony, znajduje się w nim tekst uzupełniający kontekst-->
+
+<footer></footer>                           <!--Semantycznie oznacza całą STOPKE strony,Zawiera min. Copyright,dane kontaktowe,autora,dokumenty powiązane-->
+
+
+    
+<p></p>                                     <!--Paragraf, podstawowy tekst z lekkim akapitem-->
+
+<div></div>                                 <!--Definiuje SEKCJE/BLOK na stronie czyli grupuje znaczniki-->
+
+<figure></figure>                           <!--Łączy <figcaption> z Elementem do opisania, tekst niezależny-->
+
+<figcaption></figcaption>                   <!--Opis Obrazu,Słowa generalnie OPIS używany w <figure>-->
+
+<hr>                                        <!--Linia W Bok, zmiana tematu -->
+
+<blockquote cite="Link do">                 <!--Cytowanie Dużego Bloku Tekstu, <q> na sterydach-->
+    Pierdolenie o szopenie z linku
+</blockquote>
+
+<pre></pre>                                 <!--Tekst Predefiniowany-->
+
+<address></address>                         <!--Zawiera dane kontaktowe, z reguły w stopce-->
+
+
+<h1></h1>                                   <!--Nagłówek Największy, Zaczynasz zawsze od h1 i używasz każdy max raz-->
+<h2></h2>
+<h3></h3>
+<h4></h4>
+<h5></h5>
+<h6></h6>                                   <!--Nagłówek Najmniejszy-->
+
+
+
+====== Listy(Elem. Blok.) ======
+
+
+
+<ul>                         <!--Lista Nie-Numerowana-->
+    <li value=""></li>       <!--Element Listy-->
+    <li></li>
+</ul>
+        <!--disc,circle,square i potem square w koło macieju-->
+        <!--Hierarchia Znaków Listy W Liście-->
+
+
+<ol start="" type="" reversed="reversed">            <!--Lista Numerowana-->
+    <li value=""></li>                               <!--Element Listy-->
+    <li></li>
+</ol>
+
+<dl>                <!--Lista Z Opisami-->
+    <dt></dt>       <!--Element Główny-->
+    <dd></dd>       <!--Opis Elementu-->
+</dl>
+
+
+
+====== Tabelki ======
+
+
+
+<table>                                            <!--Rozpoczyna tabelkę-->
+    <caption></caption>                            <!--Oznacza "tytuł" tabelki, musi zostać wstawione od razu po <table> oraz jest WYCENTROWANY NAD TABELĄ-->
+    <th></th>                                      <!--Oznacza kolumne w tabeli, I SŁUŻY NA OPIS DANYCH NIŻEJ WARTOŚCI-->
+    <tr></tr>                                      <!--Oznacza rządek/wiersz w tabeli-->
+    <td></td>                                      <!--Oznacza kolumne w tabeli, I SŁUŻY NA WARTOŚCI-->
+</table>
+
+<thead></thead>                                    <!--Służą do grupowania tabelki analogicznie do całej strony w html'u-->
+<tbody></tbody>
+<tfoot></tfoot>
+
+colspan="" & rowspan=""                            <!--Za pomocą liczb definiuje ile "komórek" ma zając jedna konkretna komórka, analogicznie prefix "col" do kolumn, "row" do wierszy.-->
+                                                   <!--MOŻNA UŻYWAĆ TYLKO BEZ CSS'A!-->
+    
+
+====== Formularze ======
+
+
+
+<form action="" method="" autocomplete="" novalidate=""></form>  <!--Oznacza cały formularz, action="" oznacza metode przesylu formularza po przycisku submit.-->
+                                                                 <!--method="" oznacza w jaki sposób ( POST -szyfrowane; GET -NIE szyfrowane)-->
+                                                                 <!--autocomplete="" oznacza czy do pól w formularzu przeglądarka może proponowac loginy i hasła-->
+                                                                 <!--novalidate="" oznacza czy pola w CAŁYM formularzu mają być sprawdzane-->
+
+<fieldset></fieldset>                    <!--Oznacza grupę w formularzu, graficznie to ramka-->
+
+<legend></legend>                        <!--To tytuł grupy/ramki w formularzu pojawia się graficznie w <fieldset>-->
+
+<textarea></textarea>                    <!--To duże pole na tekst, można je samemu skalować-->
+
+<label></label>                          <!--Tytuł <input>-->
+
+<meter></meter>                          <!--Wyświetla pasek postępu używa się z atrybutami min,max oraz value-->
+
+<progress></progress>                    <!--wyświetla progres czegoś np. pobierania-->
+
+<output></output>                        <!--Wyświetla wynik jakiegoś działania np. dodawania-->
+    
+<input type="" placeholder="">           <!--Pole w które "wpisuje" się dane, placeholder="" oznacza szary tekst pod pola do wpisania tekstu-->
+
+type=""                                  <!--Może przyjąć następujące wartości-->
+
+"text"               <!--Małe pole tekstowe, mniejsze niż <textarea>-->
+"search"             <!--Pole do paska szukania-->
+"tel"                <!--Pole na numer telefonu-->
+"url"                <!--Pole na link-->
+"email"              <!--Pole na adres E-mail, wymaganiem "@"-->
+"datetime"           <!--Pole do wpisania konkretnej daty TYLKO KURWA U MNIE NIE DZIAŁA-->
+"time"               <!--Pole do wybrania JEDYNIE godziny-->
+"date"               <!--Pole do wybrania JEDYNIE daty-->
+"datetime-local"     <!--Połączenie "time" i "date"-->
+"number"             <!--Pole do wybrania numeru, wspiera float (1.2 itp.)-->
+"range"              <!--Suwak do wybierania wartości liczbowych-->
+"image"              <!--Klikalny obrazek-->
+"checkbox"           <!--Kratka do zaznaczenia fajeczką, wielokrotny wybór kurde faja-->
+"radio" ORAZ name="" <!--Pola JEDNOKROTNEGO wyboru,łączone ze sobą za pomocą tego SAMEGO name=""-->
+"password"           <!--Pole na hasło, "kropkuje" wpisany input lecz nie szyfruje-->
+"file"               <!--Pole do wybrania pliku do przesłania-->
+"submit"             <!--Pole do OSTATECZNEGO wysłania formularza, potrzebny atrybut action="" w <form>-->
+"reset"              <!--Resetuje wszystkie zaznaczone opcje w formularzu-->
+"button"             <!--Tworzy przycisk, modyfikowany w JS'ie-->>
+
+    
+
+<select></select>        <!--Wybieranie z listy, wymaga od ciebie ZAWSZE jednej opcji-->
+
+<datalist></datalist>    <!--Wybieranie z listy, nie wymaga żadnej opcji-->
+    
+<option></option>        <!--Opcja do <select> albo <datalist>-->
+
+<optgroup></optgroup>    <!--Grupa, przedziałka do <option> w <select> albo <datallist-->
+
+
+
+=== Atrybuty Do Formularzy ===
+    
+hidden=""            <!--Ukrywa pole-->
+
+value=""             <!--Domyślna wartość-->
+    
+readonly=""          <!--Da się klikac oraz focusować ale nie da się zmienić-->
+
+disabled=""          <!--Chuja możesz i pole jest szare oraz się nie liczy do submita-->
+
+size=""              <!--Dla textowych inputów dopasowywuje pole do limitu znaków a dla <select> może pokazywać więcej niż jedna opcje-->
+
+maxlength=""         <!--Nie przyjmuje więcej niż "" znaków-->
+
+autofocus=""         <!--Po załądowaniu strony pole zostanie automatycznie zaznaczone-->
+
+checked=""           <!--Przy załadowaniu strony "checkbox/radio" będzie zaznaczone-->
+
+min=""               <!--Minimalna wartość znaków dla pól które akceptują numery-->
+    
+max=""               <!--Maksymalna wartość znaków dla pól które akceptuja numery-->
+
+step=""              <!--W przypadku "range" oznacza co ile ma się ruszać suwak-->
+
+required=""          <!--Pole wymagane do ostatecznego zatwierdzenia-->
+
+multiple             <!--Możliwość wielokrotnego wyboru opcji w znaczniku <select>-->
+
+wrap=""              <!--Definiuje zawijanie tekstu w <textarea> po wysłaniu formularza, Używa się z ="hard/soft"-->
+    
+====== Głównie Semantyka :nerd: ======
+
+
+
+<abbr></abbr>                                                       <!--Oznaczenie skrótów,Przerywane podkreślenie-->
+
+<time></time>                                                       <!--Definiowanie Czasu, Używane często z atrybutem "datetime"-->
+<time datetime="2024:09:12T12:12+02:00"></time>                     <!--HH:MM:SS   YYYY-MM-DD   +HH:MM   -HH:MM-->
+                                                                    <!--2013-12-25T11:12-08:00   HHHH-MM-DDTHH-MM-HH:MM-->
+
+<code></code>                                                       <!--Definiowanie Kodu programistycznego, lub jego części-->
+
+<var></var>                                                         <!--Kursywa,Definiowanie obecności Zmiennej Programistycznej albo matematycznej-->
+
+<samp></samp>                                                       <!--Prezentownie całego/części outputu z jakiegoś programu-->
+
+<kbd></kbd>                                                         <!--Lekko mniejsza czcionka, Oznacza się tym klawisze z klawiatury-->
+
+
+
+====== Kursywa ======
+
+
+
+<dfn></dfn>                                         <!--Kursywa, Oznaczenie czegoś co zaraz zostanie opisane/zdefiniowane-->
+
+<em></em>                                           <!--Kursywa, Coś Wyróżnione W Zdaniu-->
+
+<i></i>                                             <!--Kursywa,Inaczej Napisane Coś, Inny Głos/wydzwięk-->
+
+<cite></cite>                                       <!--Kursywa, Cytowanie dzieła, pracy czegoś konkretnego--> 
+
+
+
+====== Reszta ======
+
+
+
+<mark></mark>                                                           <!--Zaznacza tekst (jakby zakreślaczem)-->
+
+<small></small>                                                         <!--Lekko zmniejsza tekst-->
+
+<sub></sub>                                                             <!--Dolny index-->
+
+<sup></sup>                                                             <!--Górny index-->
+
+<q cite=""></q>                                                         <!--Cytowanie Małego Kawałka Tekstu,Dodaje Cudzysłowy-->
+
+<br>                                                                    <!--Wcięcia w tekście, forsowanie ENTERA-->
+
+<wbr>                                                                   <!--Wcięcia w tekście, jednak gdy przeglądarka zdecyduje że jest ono potrzebne-->
+
+<strong></strong>                                                       <!--Pogrubienie tekstu, oraz wyróżnienie w zdaniu-->
+
+<b></b>                                                                 <!--Pogrubienie tekstu, to samo co <strong> ale nie wyróżnia nic w zdaniu, po prostu jest-->
+
+<span></span>                                                           <!--Takie same jak <div> ale Nie jest blokowy, używany do stylizacji CSS'em-->
+
+<iframe src="" title=""></iframe>                                       <!--Okno w oknie-->
+
+<script src="" type=""></script>                                        <!--Pozwala dodać kod JavaScripta na stronę, bezpośrednio-->
+
+<noscript></noscript>                                                   <!--Wyświetla tekst w razie włączonego noscript'a-->
+    
+<embed type="" src="" width="" height="">                               <!--Głównie do dodawania martwych animacji Flashowych (.swf) xd-->
+
+<canvas height="" width="" id=""></canvas>                              <!--Używany do "malowania" skryptami, najczęsciej JavaScript-->
+
+    
+<object type="application/x-java-applet" height="" width=""></object>   <!--Głównie do dodawania appletów javy-->
+    <param name="" value="">                                            <!--Parametry dotyczące <object>-->
+
+<ruby></ruby>                               <!--Tekst główny z <rt> na górze-->
+
+<rt></rt>                                   <!--Mniejszy tekst nad <ruby>, z reguły wymowa fonetyczna-->
+
+
+
+<a rel="" href=""></a>                                          <!--A używane do dawania linków z <href>'em-->
+
+<a href="">
+    <img src="">                                                        <!--To samo ale z klikalnym obrazkiem-->        
+</a>
+
+
+<picture>                                                       <!--Definiowanie Obrazka, używane do większej ilości obrazów-->
+    <source media="(min-width:650px)" srcset="imgMini.png">     <!--W tym przypadku wyświetla 3x zdjęcia i będą się one zmieniąć w zależności od rozdzielczości strony-->
+    <source media="(min-width:450px)" srcset="imgMid.png">
+    <img src="imgNormal.png" alt="" style="width:auto;">
+</picture>
+
+
+<img src="cos.png" alt="" type="" height="" width="">         <!--Wstawia obraz, najlepiej w formacie .png-->
+
+<video height="" width="" controls="controls" preload="preload">                  <!--Wstawia Plik Wideo-->
+    <source src="chuj.mp4" type="video/mp4">                                      <!--Obsługuje głównie choć zależy od codecu : .mp4 .WebM .ogg-->
+</video>                                                                          <!--Reszta: https://www.w3.org/html/wiki/Elements/video-->
+
+<audio controls="controls" autoplay="autoplay" loop="loop" preload="preload">     <!--Wstawia Plik Audio-->
+    <source src="chuj.ogg" type="audio/ogg">                                      <!--Obsługuje głównie choć zależy od codecu : .mp3 .wav .ogg-->
+</audio>                                                                          <!--Reszta: https://www.w3.org/html/wiki/Elements/audio-->
+
+<map>                                    <!--Definiuje użycie mapy z "klikalnymi" obrazami w której znajdują się liczne znaczniki <area>-->
+    <area></area>                        <!--Definiuje miejsca na obrazach które są "klikalne"-->
+</map>                                   <!--To jest z deńka pojebane i w sumie chuj wie jak to w praktyce działa-->
+====== Edytorskie ======
+
+
+
+<del></del>                                                             <!--Przekreślenie, usuwanie czegoś i wstawione w zamian <ins>-->
+
+<ins></ins>                                                             <!--Podkreślenie, wstawiane "po" <del>, JEDNAK nie jest używane ze względu na skojarzenie z hiperłączem-->
+
+cite=""                                                                 <!--Cytowanie powodu dla którego stał się <ins> lub <del>-->
+
+datetime=""                                                             <!--Precyzowanie kiedy zmiany za pomocą <ins> oraz <del> zostały zrobione-->
+    
+    
+====== ATRYBUTY OGÓLNE ======
+
+
+hidden                                 <!--Atrybut który ukrywa dany element przed wyświetlaniem go na stronie-->
+
+id=""                                  <!--Do tworzenia kotwic, oraz oznaczania specyficznych elementów do CSS'a-->
+
+class=""                               <!--Definiowanie selektora do CSS'a-->
+
+style=""                               <!--styling czegoś, raczej się robi w css'ie ale w razie co jest jako atrybut-->
+
+title=""                               <!--Pokazuje tekst jak najedziesz na element z tym-->
+
+href=""                                <!--Link/Hiperłącze, Może mieć parametr target="" z , _blank; _self; _parent; _top -->
+
+====== ATRYBUTY ======
+    
+start=""                               <!--Przy listach numerowanych, listy zaczyną się od zdefiniowanej liczby-->
+
+href=""                                <!--Link/hiperłącze-->
+
+cite=""                                <!--Cytowanie oryginału, w <q> i <blockquote>-->
+
+src=""                                 <!--źródło-->
+
+rel=""                                 <!--Specyfikuje relacje między aktualnym plikiem jak i podłączonym plikiem-->
+
+srcset=""                              <!--Źródło w przypadku wielu potrzebnych plików w danej czynności--> 
+
+value=""                               <!--Generalnie wartość czegokolwiek XD,w przyciskach co się odsyła po kliknięciu oraz w listach odkąd zacząć.. etc.-->
+
+reversed=""                            <!--Lista będzie się liczyć od dupy strony-->
+
+type=""                                <!--Głównie definiuje jakie dane są wpisywane w znacznik <input>, a poza tym na logike-->
