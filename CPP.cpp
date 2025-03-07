@@ -30,3 +30,9 @@ Employee data(Employee E)
     E.Name = "hebdov";
     return (E);
 }
+
+class A{};
+class B{};
+A *a;
+B b;
+a = &b;
