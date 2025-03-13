@@ -1,3 +1,3 @@
 # Notatki dla sztywnych gituf
-## hebda to kondon zlamany
-### zajebioza te notatki, rel?
+## HTML, CSS, JS oraz PHP na INF.03
+###### HTML - skończony, reszta w trakcie
