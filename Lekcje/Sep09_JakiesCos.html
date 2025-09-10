@@ -6,12 +6,18 @@
   <title>Document</title>
 </head>
 <body>
-    <input type="checkbox" name="react" id="react"> <label for="react">react</label><br>
-    <input type="checkbox" name="js" id="js"> <label for="js">js</label><br>
-    <input type="text" name="miasto" id="miasto"><label for="miasto">miasto</label><br>
-        <input type="text" name="raty" id="raty"><label for="raty">raty</label><br>
-        <button type="submit" onclick="Oblicz()">Sprawdź cenę</button>
-        <p id="wynik"></p>
+<h3>Oblicz miesięczną ratę</h3>
+            <input type="checkbox" name="react" id="react" class="kontrolki"><label for="react">Kurs React.js</label><br>
+            <input type="checkbox" name="js" id="js" class="kontrolki"><label for="js">Kurs JavaScript</label><br>
+            <label for="raty">Liczba rat: </label> 
+            <input type="number" name="raty" id="raty" class="kontrolki"><br>
+            <select name="miasto" id="miasto" class="kontrolki">
+                <option value="Warszawa">Warszawa</option>
+                <option value="Katowice">Katowice</option>
+                <option value="Gdańsk">Gdańsk</option>
+            </select><br>
+            <button onclick="Oblicz()" class="kontrolki">Oblicz</button><br>
+            <p id="wynik"></p>
 </body>
 
 <script>
