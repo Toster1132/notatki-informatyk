@@ -1,5 +1,5 @@
--- Stworz tabele jezeli nie istnieje o nazwie "Tabela"
-CREATE TABLE [IF NOT EXISTS] Tabela (
+-- Stworz tabele
+CREATE TABLE Tabela (
   -- "id" typu INT, Jest jako klucz główny, Automatycznie zdobywa wartość przez inkrementacje
   id INT AUTO_INCREMENT PRIMARY KEY,
   -- "oznaczenie" typu VARCHAR(20) => (Max 20 znaków ale może być mniej), nie może być NULL, musi być unikatowe
