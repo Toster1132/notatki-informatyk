@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<style>
+/*
+*
+*           NIE JEST SKONCZONE, NIE CHCE MI SIE
+*
+*
+*/
+  * {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    background-color: #E0F7FA;
+  }
+
+  div .glowny {
+    width: 95%;
+  }
+</style>
+
+<body>
+  <form id="formulasz">
+    <label>Imie:</label>
+    <input name="imie" id="imie" type="text"><br>
+    <label>Nazwisko:</label>
+    <input name="nazwisko" id="nazwisko" type="text"><br>
+    <label>E-mail:</label>
+    <input name="mail" id="mail" type="email"><br>
+    <select name="zgl" id="zgl">
+      <option>Wirusy</option>
+      <option>Cos jeszcze...</option>
+    </select><br>
+    <input type="checkbox" id="kopia" name="kopia"><label>Wyspij kopie wiadomiosci</label><br>
+    <button onclick="Czysc()" id="czysc">Czysc</button>
+    <button onclick="Wyslij()" id="Wyslij">Wyslij</button>
+    <p id="wynik"></p>
+  </form>
+</body>
+<script>
+  function Wyslij() {
+    const imie = document.getElementById("imie").value;
+    const nazwisko = document.getElementById("nazwisko").value;
+    const email = document.getElementById("mail").value;
+    const zgloszenie = document.getElementById("zgl").value;
+    const wynik = document.getElementById("wynik");
+
+    wynik.innerHTML = "<hr><br><p>" +
+      imie + " " + nazwisko + "<br>" +
+      email.toLowerCase() + "<br>" +
+      "Usluga:" + zgloszenie + "</p>";
+  }
+  function Czysc() { // nie wiem czy to tak powinno byc czy powinno byc w html'u,nie doczytalem mam to gdzies
+    document.getElementById("formulasz").reset();
+  }
+</script>
+
+</html>

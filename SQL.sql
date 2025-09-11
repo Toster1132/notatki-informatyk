@@ -4,8 +4,25 @@ CREATE TABLE Tabela (
   id INT AUTO_INCREMENT PRIMARY KEY,
   -- "oznaczenie" typu VARCHAR(20) => (Max 20 znaków ale może być mniej), nie może być NULL, musi być unikatowe
   oznaczenie VARCHAR(20) NOT NULL UNIQUE,
-  -- "stanKonta" typu DECIMAL => (Bardzo dokładny typ danych, must have przy bankowości)
+  -- "stanKonta" typu DECIMAL => (Bardzo dokładny typ danych, must have przy kasie)
   -- DECIMAL(p,s) => (p = precyzja czyli max ilość liczb w zmiennej, s = skala po przecinku) || DECIMAL(3,1) z 3.14159 => 3,1
   -- DEFAULT wartość 0.00
   stanKonta DECIMAL(10,2) NOT NULL DEFAULT 0.00
 );
+CREATE TABLE foo(
+  -- Alternatywny zapis klucza głównego
+  id INT AUTO_INCREMENT,
+  PRIMARY KEY(id)
+);
+
+-- Usuń tabele Tabela
+DROP TABLE Tabela;
+
+-- INSERT INTO <nazwa tabeli> (nazwa1,nazwa2)
+-- VALUES (wartosc1,wartosc2);
+INSERT INTO Tabela(oznaczenie,stanKonta) VALUES("General Monobrew",12);
+
+-- SELECT <kolumny, * oznacza wszystko> FROM <nazwa tabeli> WHERE <warunek>
+-- Wydaj <kolumny> z <tabeli> ktore spelniaja <warunek>
+SELECT * FROM Tabela WHERE oznaczenie != "GeneralMonobrewow"; -- oznaczenie nie jest równe "GeneralMonobrewow"
+SELECT stanKonta FROM Tabela WHERE stanKonta >= 10;           -- stanKonta jest wiekszy niz 10
