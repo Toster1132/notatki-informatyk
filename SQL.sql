@@ -15,6 +15,12 @@ CREATE TABLE foo(
   PRIMARY KEY(id)
 );
 
+-- Zmienne czasowe, formatowanie czasu
+DATE      -- YYYY-MM-DD
+DATETIME  -- YYYY-MM-DD HH:MI:SS
+YEAR      -- YY / YYYY
+TIMESTAMP -- YYYY-MM-DD HH:MI:SS  -- Zakres od 1970-01-01 do 2038-12-31
+
 -- Usuń tabele Tabela
 DROP TABLE Tabela;
 
@@ -26,3 +32,4 @@ INSERT INTO Tabela(oznaczenie,stanKonta) VALUES("General Monobrew",12);
 -- Wydaj <kolumny> z <tabeli> ktore spelniaja <warunek>
 SELECT * FROM Tabela WHERE oznaczenie != "GeneralMonobrewow"; -- oznaczenie nie jest równe "GeneralMonobrewow"
 SELECT stanKonta FROM Tabela WHERE stanKonta >= 10;           -- stanKonta jest wiekszy niz 10
+SELECT * FROM Tabela WHERE data >= "2001-10-10";              -- Data jest wieksza niz ta w ""
