@@ -1,8 +1,30 @@
+====== Terminy ======
 
-<link href="" rel="stylesheet" / rel="alternate-stylesheet" type="text/css">      /*Podpięcie arkusza .css do bazy .html, "alternate-stylesheet" w przypadku n>1 arkuszy*/
-@importu url("www.hwdp-strazy-miejskiej.pl/style.css")                            /*Podpięcie arkusza .css przez neta*/
+
+
+Kaskadowość - Dziedziczenie w css
+serif - Mają glify
+sans serif - Nie maja glifów (i tylko chyba to xd)
+
+
+
+====== Podłączanie css ======
+
+
+
+<link href="" rel="stylesheet" / rel="alternate-stylesheet" type="text/css">     /*Podpięcie arkusza .css do bazy .html, "alternate-stylesheet" w przypadku n>1 arkuszy*/
+<style></style>                                                                  /*Dodanie css'a bezpośrednio w pliku html*/
+<p style="color: red;"></p>                                                      /*Dodanie css'a bezpośrednio do znacznika*/
+@font-face
+{
+  @import url("www.hwdp-strazy-miejskiej.pl/style.css")                            /*Podpięcie arkusza .css przez neta*/
+}
+
+
 
 ====== Selektory CSS ======
+
+
 
 * {
 }
@@ -37,7 +59,13 @@ h2,
 h6.przyklad {
 }
 /*Dla grupy wszystkich wymienionych znaczników, class="" oraz id=""*/
-====== Jednostki ( ͡° ͜ʖ ͡°) ======
+
+
+
+====== Jednostki ======
+
+
+
 px  /*pixele*/
 
 pt  /*punkty, w prezentacja są do czcionek*/
@@ -62,7 +90,19 @@ grad /*idk i mi to troche jebie*/
 
 deg /*Stopnie*/
 
-====== Atrybuty hehe ======
+
+
+====== Jakieś inne fiubzdziu =======
+
+
+
+!important = /*W przypadku dwoch "color: red;" & "color: green;" ten ktory ma !important bedzie mial priorytet*/
+
+
+
+====== Atrybuty "Proste Bardziej" ======
+
+
 
 color: red/rgb(255,0,0)/#FF00FF;             /*Ustawia kolor czcionki*/
 
@@ -70,4 +110,47 @@ background-color: red/rgb(255,0,0)/#FF00FF;  /*Ustawia kolor tła*/
 
 font-size: 12pt/12px;                        /*Ustawia rozmiar czcionki*/
 
-font-family: comic-sans;                     /*Ustawia czcionke*/
+text-indent: 12px;          /*Ustawia akapit*/
+
+word-wrap: normal/break-word;     /*Default/Pozwala by dzielić słowa których normalnie nie można*/
+
+letter-spacing: 12px;       /*Odstęp między literami, normal wraca do domyślnych*/
+
+word-spacing: 11px;     /*Odstęp między słowami, normal wraca do domyślnych*/
+
+line-height: 12px;      /*Odstęp między linijkami tekstu, dzieli się przez dwa (góra i dół), normal wraca do domyślnych*/
+
+text-shader: 2px 2px 5px red;  /*Cień - prawa, dół, rozmycie, kolor*/
+
+font-weight: bold /*Grubość czcionki, bold/normal | Teoretycznie jest 100-900 ale tego sie nie używa*/
+
+font-variant: small-caps;     /*normal/small-caps - small-caps to taki smieszny trybik idk jak to opisac*/
+
+font-family: 'Times New Roman';       /*Czcionki na stronie, jak jednej nie ma to wchodzi kolejna i tak w koło*/
+
+
+
+====== Atrybuty "Proste Mniej" ======
+
+
+
+text-align /*Ustawia tekst w bloku*/
+- left/right/center /*Lewa/Prawa/Środek*/
+- justify /*Żeby było równo idealnie kazda linijka*/
+
+vertical-align /*Ustawia tekst w pion, aka w sztorc*/
+- sub/super /*Dolny indeks/Górny indeks*/
+- top/bottom/middle /*Góra/Dół/Środek*/
+
+white-space
+-pre/pre-wrap/*Jakbys dał <pre>/To samo ale może się złamać gdy przegladarka stwierdzi ze ma*/
+-normal  /*Zgadnij xD*/
+
+text-decoration
+-overline/underline    /*Linia Na górze/Linia na dole*/
+-none
+
+text-transform
+-capitalize   /*Pierwsza litera duża*/
+-lowecase/uppercase /*male litery/DUZE LITERY*/
+-none
