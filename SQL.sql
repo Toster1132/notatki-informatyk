@@ -21,6 +21,10 @@ DATETIME  -- YYYY-MM-DD HH:MI:SS
 YEAR      -- YY / YYYY
 TIMESTAMP -- YYYY-MM-DD HH:MI:SS  -- Zakres od 1970-01-01 do 2038-12-31
 
+DISTINCT -- Nie mogą się powtarzać
+OR  -- Warunek 1 OR Warunek 2 -- Ma spełniać to albo to
+AND -- Warunek 1 AND Warunek 2 -- Ma spełniać to i to
+
 -- Usuń tabele Tabela
 DROP TABLE Tabela;
 
@@ -33,6 +37,7 @@ INSERT INTO Tabela(oznaczenie,stanKonta) VALUES("General Monobrew",12);
 SELECT * FROM Tabela WHERE oznaczenie != "GeneralMonobrewow"; -- oznaczenie nie jest równe "GeneralMonobrewow"
 SELECT stanKonta FROM Tabela WHERE stanKonta >= 10;           -- stanKonta jest wiekszy niz 10
 SELECT * FROM Tabela WHERE data >= "2001-10-10";              -- Data jest wieksza niz ta w ""
+SELECT * FROM Tabela WHERE LIMIT 10 OFFSET 5                  -- Wyświetl 10 Wyników poczynając od 5+1
 
 -- UPDATE <nazwa tabeli> SET <zmienna> = <wartosc> WHERE <warunek>
 UPDATE Tabela SET stanKonta=100 WHERE id != 2;

@@ -92,12 +92,24 @@ deg /*Stopnie*/
 
 
 
+====== Kolory ======
+
+
+
+hsl(100%,100%,100%) /*hue - barwa, saturation - nasycenie, lightness - jasnosc*/
+hsla(0,0,0,0) /*To samo ale z dodatkiem kanału alpha, tak jakby przezroczystość*/
+rgb(255,255,255) /*Red, Green, Blue*/
+rgba(0,0,0,0) /*alpha*/
+
+
+
 ====== Jakieś inne fiubzdziu =======
 
 
 
 !important = /*W przypadku dwoch "color: red;" & "color: green;" ten ktory ma !important bedzie mial priorytet*/
 
+W przypadku wpisywania danych procentowych można również posłużyć się wartościami od 0 do 1.
 
 
 ====== Atrybuty "Proste Bardziej" ======
@@ -107,6 +119,31 @@ deg /*Stopnie*/
 color: red/rgb(255,0,0)/#FF00FF;             /*Ustawia kolor czcionki*/
 
 background-color: red/rgb(255,0,0)/#FF00FF;  /*Ustawia kolor tła*/
+
+background-image: url('hebda/gej.png'); /*Ustawia obraz jako tło*/
+
+background-size:100%, 200%; /*Ustawia wymiary tła*/
+
+background-repeat /*Ustawia Powtazanie sie tła*/
+- repeat/no-repeat /*Powtarzaj/Nie-powtarzaj*/
+- repeat-y/repeat-x /*Powtarzaj w osi Y/w osi X*/
+
+background-position /*Gdzie zaczyna sie background*/
+- left/center/right
+- top/bottom
+
+background-clip /*Jak bardzo ma background wyjeżdżać*/
+- border-box/padding-box/content-box /*Wchodzi w border/na bazie paddingu/na bazie margin*/
+
+opacity:10%; /*Przeźroczystość*/
+
+list-style-type: upper-roman; /*Ustawia typ list, może być stosowany zarówno do <ul> jak i <ol>*/
+
+list-style-position: inside/outside; /*Gdzie ta kropka/liczba się znajduje*/
+
+list-style-image: url('xd.gif'); /* obraz zamiasat kropki/liczby*/
+
+position: absolute; /*wtedy uzywasz top:10px & right: 10px i bedzie 10px w górę i dół od górnego kątu ekranu*/
 
 font-size: 12pt/12px;                        /*Ustawia rozmiar czcionki*/
 
@@ -127,12 +164,6 @@ font-weight: bold /*Grubość czcionki, bold/normal | Teoretycznie jest 100-900 
 font-variant: small-caps;     /*normal/small-caps - small-caps to taki smieszny trybik idk jak to opisac*/
 
 font-family: 'Times New Roman';       /*Czcionki na stronie, jak jednej nie ma to wchodzi kolejna i tak w koło*/
-
-
-
-====== Atrybuty "Proste Mniej" ======
-
-
 
 text-align /*Ustawia tekst w bloku*/
 - left/right/center /*Lewa/Prawa/Środek*/
