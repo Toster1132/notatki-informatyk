@@ -41,3 +41,6 @@ SELECT * FROM Tabela WHERE LIMIT 10 OFFSET 5                  -- Wyświetl 10 Wy
 
 -- UPDATE <nazwa tabeli> SET <zmienna> = <wartosc> WHERE <warunek>
 UPDATE Tabela SET stanKonta=100 WHERE id != 2;
+
+-- Wybiera unikatowe
+SELECT DISTINCT
