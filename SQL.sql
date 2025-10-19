@@ -44,3 +44,14 @@ UPDATE Tabela SET stanKonta=100 WHERE id != 2;
 
 -- Wybiera unikatowe
 SELECT DISTINCT
+
+-- Nie chce mi się robić notatek, będą tu jakieś losowe kwerendy :3
+SELECT state, COUNT(*) FROM customers
+GROUP BY state
+ORDER BY COUNT(*) DESC;
+--
+SELECT city, COUNT(*) FROM customers
+GROUP BY city
+HAVING COUNT(*) > 3
+ORDER BY COUNT(*) DESC;
+--
